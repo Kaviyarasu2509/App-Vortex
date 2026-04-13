@@ -1,0 +1,143 @@
+:root {
+  --green: #6dbb43;
+  --blue: #1fa2c9;
+  --dark: #0f172a;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+/* Overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(109, 187, 67, 0.7),
+    rgba(31, 162, 201, 0.7)
+  );
+  top: 0;
+  left: 0;
+}
+
+/* Content above overlay */
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* COMPANY NAME */
+.company-name {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Cursor style */
+.typed-cursor {
+  font-size: 26px;
+  color: #6dbb43;
+}
+
+/* TITLE */
+.hero-title {
+  font-size: 68px;
+  font-weight: bold;
+}
+
+/* TEXT */
+.hero-text {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+/* BUTTONS */
+.btn-primary-custom {
+  background: white !important;
+  color: #1fa2c9 !important;
+  border-radius: 25px !important;
+  padding: 10px 20px !important;
+  font-weight: bold !important;
+}
+
+.btn-outline-custom {
+    margin-left: 20px;
+  border: 2px solid white !important; 
+  color: white !important;
+  border-radius: 25px !important;
+  padding: 10px 20px !important;
+}
+
+/* SERVICES */
+.services {
+  padding: 60px 0;
+}
+
+.service-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+/* WHY */
+.why {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+.why-box {
+  background: linear-gradient(120deg, #6dbb43, #1fa2c9);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* CTA */
+.cta {
+  padding: 60px 0;
+  background: #0f172a;
+  color: white;
+}
+
+/* COUNTER */
+.counter {
+  background: linear-gradient(120deg, #6dbb43, #1fa2c9);
+  color: white;
+  padding: 60px 0;
+}
+
+.counter h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* EXTRA */
+.extra {
+  padding: 60px 0;
+}
+
+.section-desc {
+  color: #666;
+  margin-top: 10px;
+}
+
+.hero-subtext {
+  margin-top: 10px;
+  opacity: 0.9;
+}

@@ -1,0 +1,95 @@
+:root {
+  --green: #6dbb43;
+  --blue: #1fa2c9;
+  --dark: #0f172a;
+}
+
+/* PAGE */
+.services-page {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.subtitle {
+  color: #666;
+  margin-top: 10px;
+}
+
+/* CARD */
+.service-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.4s ease;
+}
+
+/* IMAGE */
+.service-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+/* CONTENT */
+.service-card h5 {
+  margin-top: 15px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.service-card p {
+  padding: 0 15px 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* HOVER EFFECT */
+.service-card:hover {
+  transform: translateY(-12px);
+}
+
+/* Image Zoom */
+.service-card:hover img {
+  transform: scale(1.1);
+}
+
+/* GRADIENT OVERLAY (Hover) */
+.service-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 220px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(109, 187, 67, 0.6),
+    rgba(31, 162, 201, 0.6)
+  );
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* TEXT ANIMATION */
+.service-card:hover h5 {
+  color: var(--blue);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .service-card img {
+    height: 180px;
+  }
+}

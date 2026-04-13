@@ -1,0 +1,82 @@
+:root {
+  --green: #6dbb43;
+  --blue: #1fa2c9;
+  --dark: #0f172a;
+}
+
+/* HERO */
+.intern-hero {
+  background: linear-gradient(120deg, #6dbb43, #1fa2c9);
+  color: white;
+  padding: 80px 0;
+}
+
+/* COURSES */
+.intern-courses {
+  padding: 60px 0;
+}
+
+.course-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+}
+
+/* BENEFITS */
+.intern-benefits {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+.benefit-box {
+  background: linear-gradient(120deg, #6dbb43, #1fa2c9);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* FORM */
+.intern-form {
+  padding: 60px 0;
+}
+
+.form-box {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-box button {
+  background: linear-gradient(120deg, #6dbb43, #1fa2c9);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  opacity: 0.9;
+}
+
+/* TITLE */
+.section-title {
+  font-weight: bold;
+}

@@ -1,0 +1,75 @@
+:root {
+  --green: #6dbb43;
+  --blue: #1fa2c9;
+  --dark: #0f172a;
+}
+
+/* BANNER */
+.about-banner {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.about-banner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(109, 187, 67, 0.7),
+    rgba(31, 162, 201, 0.7)
+  );
+}
+
+.about-banner h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* CONTENT */
+.about-content {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* VISION & MISSION */
+.vision-mission {
+  padding: 60px 0;
+  background: #f8f9fa;
+}
+
+.card-box {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+.card-box h3 {
+  color: #1fa2c9;
+}
+
+/* WHY */
+.why-about {
+  padding: 60px 0;
+}
+
+.why-box {
+  background: linear-gradient(120deg, #6dbb43, #1fa2c9);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}

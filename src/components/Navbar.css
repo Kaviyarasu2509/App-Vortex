@@ -1,0 +1,68 @@
+.custom-navbar {
+  background: linear-gradient(90deg, #6dbb43, #1fa2c9);
+  padding: 12px 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+.logo {
+  height: 40px;
+  margin-right: 8px;
+}
+
+.brand-text {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* Links */
+.nav-link {
+  color: white !important;
+  margin: 0 10px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #000 !important;
+}
+
+/* Underline animation */
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+  margin: auto;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Button */
+.contact-btn {
+  margin-left: 15px;
+  background: white;
+  color: #1fa2c9;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 8px 18px;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background: #0f172a;
+  color: white;
+}
+
+/* Mobile */
+.navbar-toggler {
+  border: none;
+  color: white;
+  font-size: 22px;
+}
