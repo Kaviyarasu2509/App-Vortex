@@ -1,5 +1,5 @@
 .custom-navbar {
-  background: linear-gradient(90deg, #6dbb43, #1fa2c9);
+  background: linear-gradient(90deg, #ffffff, #ffffff);
   padding: 12px 0;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
@@ -11,22 +11,23 @@
 }
 
 .brand-text {
-  color: white;
-  font-weight: 600;
-  font-size: 20px;
+  color: rgb(4, 177, 62);
+  font-weight: 700;
+  font-size: 30px;
 }
 
 /* Links */
 .nav-link {
-  color: white !important;
+  color: rgb(55, 133, 3) !important;
   margin: 0 10px;
-  font-weight: 500;
+  font-weight: 700 !important;
+  font-size: 17px !important;
   position: relative;
   transition: 0.3s;
 }
 
 .nav-link:hover {
-  color: #000 !important;
+  color: #06b39b !important;
 }
 
 /* Underline animation */

@@ -36,7 +36,7 @@ function Contact() {
             <div className="col-md-4">
               <div className="contact-box">
                 <h5>📧 Email</h5>
-                <p>appvortexsolution.mail@gmail.com</p>
+                <p>info@appvortexsolution.in</p>
               </div>
             </div>
 

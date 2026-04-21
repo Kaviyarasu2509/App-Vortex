@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import logo from "../assets/images/app.png";
 
 function Navbar() {
   return (
@@ -8,7 +9,7 @@ function Navbar() {
         
         {/* Logo */}
         <Link className="navbar-brand d-flex align-items-center" to="/">
-          
+          <img src={logo} alt="" class="logo" />
           <span className="brand-text">APP VORTEX SOLUTION</span>
         </Link>
 
