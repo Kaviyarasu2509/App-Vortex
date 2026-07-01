@@ -1,42 +1,82 @@
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../assets/images/app.png";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
+
+  const navLinks = [
+    { path: "/", label: "Home" },
+    { path: "/about", label: "About" },
+    { path: "/services", label: "Services" },
+    { path: "/internship", label: "Internship" },
+    { path: "/contact", label: "Contact" },
+  ];
+
   return (
-    <nav className="navbar custom-navbar navbar-expand-lg">
-      <div className="container">
-        
-        {/* Logo */}
-        <Link className="navbar-brand d-flex align-items-center" to="/">
-          <img src={logo} alt="" class="logo" />
-          <span className="brand-text">APP VORTEX SOLUTION</span>
+    <nav className={`custom-navbar ${scrolled ? "scrolled" : ""}`}>
+      <div className="container navbar-container">
+        <Link className="navbar-brand" to="/">
+          <div className="logo-wrapper">
+            <span className="logo-mark">
+              <img src={logo} alt="App Vortex Logo" className="logo" />
+            </span>
+            <div className="brand-text-wrapper">
+              <span className="brand-text-main">APP VORTEX</span>
+              <span className="brand-text-sub">SOLUTION</span>
+            </div>
+          </div>
         </Link>
 
-        {/* Toggle */}
         <button
-          className="navbar-toggler"
+          className={`navbar-toggler ${isOpen ? "active" : ""}`}
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#nav"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation"
+          aria-expanded={isOpen}
         >
-          ☰
+          <span className="toggler-icon"></span>
+          <span className="toggler-icon"></span>
+          <span className="toggler-icon"></span>
         </button>
 
-        {/* Links */}
-        <div className="collapse navbar-collapse" id="nav">
-          <ul className="navbar-nav ms-auto">
-            <li><Link className="nav-link" to="/">Home</Link></li>
-            <li><Link className="nav-link" to="/about">About</Link></li>
-            <li><Link className="nav-link" to="/services">Services</Link></li>
-            <li><Link className="nav-link" to="/internship">Internship</Link></li>
-            <li><Link className="nav-link" to="/contact">Contact</Link></li>
+        <div className={`navbar-menu ${isOpen ? "show" : ""}`}>
+          <div className="mobile-menu-head">
+            <span>Menu</span>
+            <small>Navigate App Vortex</small>
+          </div>
+
+          <ul className="navbar-nav">
+            {navLinks.map((link) => (
+              <li key={link.path} className="nav-item">
+                <Link
+                  className={`nav-link ${location.pathname === link.path ? "active" : ""}`}
+                  to={link.path}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
-
-          
         </div>
-
       </div>
+
+      {isOpen && <div className="navbar-overlay" onClick={() => setIsOpen(false)}></div>}
     </nav>
   );
 }

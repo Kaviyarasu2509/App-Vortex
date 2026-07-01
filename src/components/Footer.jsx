@@ -1,25 +1,58 @@
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import {
+  FaArrowRight,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaRocket,
+  FaWhatsapp,
+} from "react-icons/fa";
+
+const phoneNumber = "6369569637";
 
 function Footer() {
   return (
     <footer className="footer">
+      <div className="footer-glow footer-glow-one"></div>
+      <div className="footer-glow footer-glow-two"></div>
 
       <div className="container">
-        <div className="row">
+        <div className="footer-cta">
+          <div>
+            <span>Ready to grow?</span>
+            <h2>Let App Vortex Solution build your next digital move.</h2>
+          </div>
+          <Link to="/contact" className="footer-cta-btn">
+            Start Project <FaArrowRight />
+          </Link>
+        </div>
 
-          {/* Company Info */}
-          <div className="col-md-4">
-            <h5>App Vortex Solution</h5>
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <div className="footer-logo">
+              <FaRocket />
+            </div>
+            <h3>App Vortex Solution</h3>
             <p>
-              We provide Web Development, App Development, Digital Marketing,
-              Internship Programs and Hosting solutions to grow your business.
+              We provide web development, app development, digital marketing, internship programs, domain, hosting,
+              and digital growth support for businesses and students.
             </p>
+            <div className="footer-socials">
+              <a href={`https://wa.me/91${phoneNumber}`} aria-label="WhatsApp">
+                <FaWhatsapp />
+              </a>
+              <a href={`tel:+91${phoneNumber}`} aria-label="Call">
+                <FaPhoneAlt />
+              </a>
+              <a href="mailto:info@appvortexsolution.in" aria-label="Email">
+                <FaEnvelope />
+              </a>
+            </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="col-md-4">
-            <h5>Quick Links</h5>
+          <div className="footer-column">
+            <h4>Quick Links</h4>
             <ul className="footer-links">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
@@ -29,23 +62,30 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
-          <div className="col-md-4">
-            <h5>Contact</h5>
-            <p>📍 Gandhipuram, Coimbatore</p>
-            <p>📞 +91 8525999022</p>
-            <p>📧 appvortexsolution.mail@gmail.com</p>
+          <div className="footer-column">
+            <h4>Services</h4>
+            <ul className="footer-links">
+              <li><Link to="/services">Web Development</Link></li>
+              <li><Link to="/services">App Development</Link></li>
+              <li><Link to="/services">Digital Marketing</Link></li>
+              <li><Link to="/services">Domain & Hosting</Link></li>
+              <li><Link to="/internship">Internship Training</Link></li>
+            </ul>
           </div>
 
+          <div className="footer-column footer-contact">
+            <h4>Contact</h4>
+            <p><FaMapMarkerAlt /> Gandhipuram, Coimbatore - 641012</p>
+            <p><FaPhoneAlt /> <a href={`tel:+91${phoneNumber}`}>+91 {phoneNumber}</a></p>
+            <p><FaEnvelope /> <a href="mailto:info@appvortexsolution.in">info@appvortexsolution.in</a></p>
+          </div>
         </div>
 
-        {/* Bottom */}
-        <div className="footer-bottom text-center">
-          <p>© 2026 App Vortex Solution. All Rights Reserved.</p>
+        <div className="footer-bottom">
+          <p>Copyright 2026 App Vortex Solution. All Rights Reserved.</p>
+          <span>Built for modern digital growth.</span>
         </div>
-
       </div>
-
     </footer>
   );
 }

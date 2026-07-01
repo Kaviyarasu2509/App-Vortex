@@ -1,67 +1,272 @@
 import "./Services.css";
+import serviceImage from "../assets/images/home.jpg";
+import {
+  FaArrowRight,
+  FaBullhorn,
+  FaCheckCircle,
+  FaCloud,
+  FaCode,
+  FaDatabase,
+  FaGraduationCap,
+  FaLaptopCode,
+  FaMobileAlt,
+  FaPaintBrush,
+  FaRocket,
+  FaSearch,
+  FaServer,
+  FaShieldAlt,
+  FaShoppingCart,
+  FaUsersCog,
+} from "react-icons/fa";
+
+const services = [
+  {
+    icon: <FaCode />,
+    title: "Web Development",
+    text: "Fast, responsive, SEO-friendly websites for startups, brands, institutions, and local businesses.",
+    points: ["Business website", "Landing pages", "Portfolio sites", "Admin panels"],
+  },
+  {
+    icon: <FaMobileAlt />,
+    title: "App Development",
+    text: "Mobile and web apps with clean UI, strong backend flow, secure login, and scalable features.",
+    points: ["Android apps", "Web apps", "API integration", "User dashboards"],
+  },
+  {
+    icon: <FaBullhorn />,
+    title: "Digital Marketing",
+    text: "Growth campaigns that improve brand visibility, lead generation, social reach, and online trust.",
+    points: ["SEO strategy", "Social media", "Paid ads", "Lead campaigns"],
+  },
+  {
+    icon: <FaPaintBrush />,
+    title: "Web & UI Design",
+    text: "Modern visual design, claymorphism UI, wireframes, brand colors, and user-friendly page layouts.",
+    points: ["UI/UX design", "Wireframes", "Brand visuals", "Responsive layouts"],
+  },
+  {
+    icon: <FaGraduationCap />,
+    title: "Internship Programs",
+    text: "Practical training for students with live tasks, real project workflow, guidance, and portfolio support.",
+    points: ["Live projects", "Mentor support", "Certificates", "Career guidance"],
+  },
+  {
+    icon: <FaCloud />,
+    title: "Domain & Hosting",
+    text: "Reliable setup for domains, hosting, SSL, email, deployment, maintenance, and technical support.",
+    points: ["Domain setup", "Hosting", "SSL security", "Maintenance"],
+  },
+];
+
+const workflow = [
+  "Requirement discussion",
+  "UI plan and project roadmap",
+  "Development and testing",
+  "Launch, support, and growth",
+];
+
+const bundles = [
+  {
+    title: "Startup Launch",
+    text: "Website, basic branding, contact flow, hosting guidance, and launch support.",
+  },
+  {
+    title: "Business Growth",
+    text: "Website or app, SEO setup, social media strategy, lead funnel, and maintenance support.",
+  },
+  {
+    title: "Student Project",
+    text: "Training, project planning, development guidance, documentation, and presentation support.",
+  },
+];
+
+const industries = [
+  "Education",
+  "Retail",
+  "Healthcare",
+  "Real Estate",
+  "Local Business",
+  "Startups",
+  "Personal Brands",
+  "Institutions",
+];
 
 function Services() {
   return (
-    <div className="services-page">
+    <main className="services-page">
+      <section className="services-hero">
+        <div className="services-hero-glow services-glow-one"></div>
+        <div className="services-hero-glow services-glow-two"></div>
 
-      <div className="container text-center">
-        <h1 className="section-title">Our Services</h1>
-        <p className="subtitle">We provide complete IT solutions for your business growth</p>
-
-        <div className="row mt-5">
-
-          <div className="col-md-4">
-            <div className="service-card">
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8V2ViJTIwRGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D" alt="Web Development" />
-              <h5>Web Development</h5>
-              <p>Responsive and modern websites for all businesses.</p>
+        <div className="container services-hero-grid">
+          <div className="services-hero-copy">
+            <span className="services-eyebrow">Our Services</span>
+            <h1>Complete IT solutions for business growth and student success.</h1>
+            <p>
+              App Vortex Solution helps you plan, design, develop, launch, and grow your digital presence with
+              practical services built for real-world results.
+            </p>
+            <div className="services-hero-actions">
+              <a href="/contact" className="services-primary-btn">
+                Start a Project <FaArrowRight />
+              </a>
+              <a href="/about" className="services-secondary-btn">
+                Know Our Team
+              </a>
             </div>
           </div>
 
-          <div className="col-md-4">
-            <div className="service-card">
-              <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXBwJTIwRGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D" alt="App Development"/>
-              <h5>App Development</h5>
-              <p>Android & web apps with powerful features.</p>
+          <div className="services-hero-visual">
+            <img src={serviceImage} alt="Digital service planning workspace" />
+            <div className="service-floating-card">
+              <FaRocket />
+              <div>
+                <strong>Launch Ready</strong>
+                <span>Design + Development + Growth</span>
+              </div>
             </div>
           </div>
-
-          <div className="col-md-4">
-            <div className="service-card">
-              <img src="https://media.istockphoto.com/id/808098858/photo/digital-marketing-concept.webp?a=1&b=1&s=612x612&w=0&k=20&c=kTWoZfMrnLZfQajX17dCc_9tcMwsxszE0bEcH8Y-ipI=" alt="Digital Marketing" />
-              <h5>Digital Marketing</h5>
-              <p>SEO, Ads & social media strategies.</p>
-            </div>
-          </div>
-
-          <div className="col-md-4 mt-4">
-            <div className="service-card">
-              <img src="https://plus.unsplash.com/premium_photo-1683147638125-fd31a506a429?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8V2ViJTIwRGVzaWdufGVufDB8fDB8fHww" alt="Web Design" />
-              <h5>Web Design</h5>
-              <p>Creative UI/UX designs with modern look.</p>
-            </div>
-          </div>
-
-          <div className="col-md-4 mt-4">
-            <div className="service-card">
-              <img src="https://images.unsplash.com/photo-1681164315051-add1906a9b07?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8SW50ZXJuc2hpcCUyMFByb2dyYW1zfGVufDB8fDB8fHww" alt="Internship" />
-              <h5>Internship Programs</h5>
-              <p>Real-time training with live projects.</p>
-            </div>
-          </div>
-
-          <div className="col-md-4 mt-4">
-            <div className="service-card">
-              <img src="https://media.istockphoto.com/id/2179769208/photo/dns-domain-name-system-and-web-server-network-system-concept-a-person-uses-a-laptop-with-dns.webp?a=1&b=1&s=612x612&w=0&k=20&c=yJ-AyVmRdFOKDPExtSt85m4ZyIRxA39M8BjxAXWxYX4=" alt="Hosting" />
-              <h5>Domain & Hosting</h5>
-              <p>Secure and reliable hosting solutions.</p>
-            </div>
-          </div>
-
         </div>
-      </div>
+      </section>
 
-    </div>
+      <section className="services-intro section-space">
+        <div className="container intro-grid">
+          <div className="intro-card">
+            <FaLaptopCode />
+            <h2>We do more than build pages.</h2>
+            <p>
+              Every service is planned around your goal: more enquiries, better presentation, smoother operations,
+              stronger learning, or a complete digital launch.
+            </p>
+          </div>
+
+          <div className="intro-list">
+            <div><FaCheckCircle /> Clear project planning before development</div>
+            <div><FaCheckCircle /> Responsive design for mobile, tablet, and desktop</div>
+            <div><FaCheckCircle /> Support for content, SEO, hosting, and updates</div>
+            <div><FaCheckCircle /> Practical training and real project guidance</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="services-catalog section-space">
+        <div className="container">
+          <div className="services-section-heading text-center">
+            <span className="services-eyebrow">What we provide</span>
+            <h2>Services made for modern digital projects</h2>
+            <p>Choose one service or combine multiple services into a complete project package.</p>
+          </div>
+
+          <div className="services-grid">
+            {services.map((service, index) => (
+              <article className={`service-card service-card-${index + 1}`} key={service.title}>
+                <div className="service-icon">{service.icon}</div>
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+                <ul>
+                  {service.points.map((point) => (
+                    <li key={point}><FaCheckCircle /> {point}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="workflow-section section-space">
+        <div className="container workflow-grid">
+          <div className="workflow-copy">
+            <span className="services-eyebrow">How we work</span>
+            <h2>Simple workflow, clean delivery</h2>
+            <p>
+              We keep project communication clear from the first discussion to final launch, so you always know the
+              current stage and next action.
+            </p>
+          </div>
+
+          <div className="workflow-list">
+            {workflow.map((step, index) => (
+              <div className="workflow-item" key={step}>
+                <span>{`0${index + 1}`}</span>
+                <p>{step}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bundles section-space">
+        <div className="container">
+          <div className="services-section-heading text-center">
+            <span className="services-eyebrow">Project bundles</span>
+            <h2>Pick the path that matches your need</h2>
+          </div>
+
+          <div className="bundle-grid">
+            {bundles.map((bundle) => (
+              <article className="bundle-card" key={bundle.title}>
+                <h3>{bundle.title}</h3>
+                <p>{bundle.text}</p>
+                <a href="/contact">
+                  Enquire Now <FaArrowRight />
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="tech-support section-space">
+        <div className="container tech-grid">
+          <div className="tech-panel">
+            <FaDatabase />
+            <h2>Support for complete systems</h2>
+            <p>
+              We can connect frontend, backend, database, hosting, analytics, SEO, admin panels, and maintenance into
+              one practical project flow.
+            </p>
+          </div>
+
+          <div className="tech-list">
+            <div><FaServer /> Backend and API setup</div>
+            <div><FaShieldAlt /> SSL and security basics</div>
+            <div><FaSearch /> SEO-ready structure</div>
+            <div><FaShoppingCart /> E-commerce support</div>
+            <div><FaUsersCog /> CRM and admin workflows</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="industries section-space">
+        <div className="container">
+          <div className="services-section-heading text-center">
+            <span className="services-eyebrow">Who we help</span>
+            <h2>Solutions for many industries</h2>
+          </div>
+
+          <div className="industry-cloud">
+            {industries.map((industry) => (
+              <span key={industry}>{industry}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="services-cta">
+        <div className="container text-center">
+          <span className="services-eyebrow">Ready to begin?</span>
+          <h2>Tell us what you want to build. We will shape the service plan.</h2>
+          <p>
+            Whether it is a website, app, marketing campaign, hosting setup, or internship project, we can help you
+            start with clarity.
+          </p>
+          <a href="/contact" className="services-primary-btn">
+            Contact Now <FaArrowRight />
+          </a>
+        </div>
+      </section>
+    </main>
   );
 }
 
